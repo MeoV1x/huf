@@ -1,0 +1,222 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/MeoV1x/meoVis/main/meoVis')))() -- i should prob use playergui instead of coregui since detected lol
+
+local Window = OrionLib:MakeWindow({Name = "MeoVisual Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+--[[
+Name = <string> - The name of the UI.
+HidePremium = <bool> - Whether or not the user details shows Premium status or not.
+SaveConfig = <bool> - Toggles the config saving in the UI.
+ConfigFolder = <string> - The name of the folder where the configs are saved.
+IntroEnabled = <bool> - Whether or not to show the intro animation.
+IntroText = <string> - Text to show in the intro animation.
+IntroIcon = <string> - URL to the image you want to use in the intro animation.
+Icon = <string> - URL to the image you want displayed on the window.
+CloseCallback = <function> - Function to execute when the window is closed.
+]]
+
+------------------------------------------------------
+
+
+
+local Tab = Window:MakeTab({
+	Name = "MeoVis Scripts",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "MeoVis Neptunian X",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MeoV1x/MeoVis-Neptune/main/NeptuneX"))()
+      		print("button pressed")
+  	end    
+})  
+
+Tab:AddButton({
+	Name = "MeoVis DarkSword",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MeoV1x/DarkSword/main/DarkSword"))()
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "MeoVis Banisher (WIP)",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MeoV1x/Banisher/main/Banisher"))()
+      		print("button pressed")
+  	end    
+})
+
+
+------------------------------------------------------
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Miscellaneous",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Nameless Admin",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Aimbot/Esp",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MeoV1x/Aimbot-Esp/main/SmartAim"))()
+      		print("Btw, don't overruse it, people might think your exploiting if you wanna keep it silent.")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "CC SmartAim",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MeoV1x/VisAim/main/VisAim"))()
+      		print("Btw, don't overruse it, people might think your exploiting if you wanna keep it silent.")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "ESP",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RealZzHub/MainV2/main/Main.lua"))()
+      		print("Button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Delayed Bullets Aimbot",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MeoV1x/ArmySim/main/Army"))()
+      		print("Game uses delayed bullets, so heres a aimbot for it.")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "FI",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomHaxer0/Furry-infection-gui-script/main/Main-Script"))()
+      		print("Make sure theres no modes, you'll get banned on the spot.")
+  	end    
+})
+
+------------------------------------------------------
+
+local Tab = Window:MakeTab({
+	Name = "Hats",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Limb's for MeoVis Hub:"
+})  
+
+local Section = Tab:AddSection({
+   Name = "14768701869,14768693948,13421786478,11263254795,11159410305"
+
+})
+
+local Section = Tab:AddSection({
+   Name = "Hat's for Neptunian X:"
+
+})
+
+local Section = Tab:AddSection({
+   Name = "12798859142"
+
+})
+
+local Section = Tab:AddSection({
+	Name = "Hat's for Dark Sword:"
+ 
+ })
+ 
+ local Section = Tab:AddSection({
+	Name = "4773932088,5268602207,5505301521,5593848751"
+ 
+ })
+
+------------------------------------------------------
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Update Logs",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "V: 1.2    Aimbot/ESP Stuff in the Misc. Tab."
+ 
+})  
+
+local Section = Tab:AddSection({
+	Name = "V: 1.1    DarkSword is now out, try it out."
+ 
+})  
+
+local Section = Tab:AddSection({
+	Name = "V: 1.0    Neptunian X is out, try it out!"
+ 
+})  
+  
+   local Section = Tab:AddSection({
+      Name = "             Hats will be in the Hats Tab."
+
+})
+
+
+
+------------------------------------------------------
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddDropdown({
+	Name = "Credits",
+	Default = "MyWorld",
+	Options = {"Chip (Shade Hub inside hub making)","MeowldarkXD (Created the Hub and scripts)", "Maximilito (Animator)", "MyWorld (PatchmaHub Maker/Helper/Scripter)"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+------------------------------------------------------
+
+--Tab:AddParagraph("Hats","Hats are in the discord (https://discord.gg/PffRqJDf6Y)")
+
+Tab:AddButton({
+	Name = "Destroy gui",
+	Callback = function()
+		OrionLib:Destroy()
+      		print("button pressed")
+  	end    
+})
+
+OrionLib:Init()
+
+------------------------------------------------------
